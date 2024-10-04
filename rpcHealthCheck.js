@@ -44,7 +44,7 @@ async function checkCosmosRpc(rpcUrl) {
     }
 }
 
-// Function to load the RPC list from the JSON file
+// Load the RPC list from the JSON file
 async function loadRpcList() {
     try {
         const data = await fs.readFile('rpcLinks.json', 'utf8');
@@ -55,7 +55,7 @@ async function loadRpcList() {
     }
 }
 
-// Main function to check all RPCs in parallel and log the failing ones
+// Check all RPCs in parallel and log the failing ones
 async function checkRpcHealth() {
     try {
         const rpcList = await loadRpcList();
@@ -89,5 +89,5 @@ async function checkRpcHealth() {
     }
 }
 
-// Run the health check
+// Run Health Check
 checkRpcHealth();
